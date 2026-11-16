@@ -1,88 +1,96 @@
 # 💸 App de Organização de Finanças Pessoais com Vibe Coding
 
-Aprenda a **criar soluções com IA** de forma criativa, guiando ferramentas como o **Copilot** e o **Lovable** com uma comunicação simples e natural. O foco é desenvolver o conceito de um **App de Organização de Finanças Pessoais**, mas, acima de tudo, aprender o **jeito Vibe de programar com IA**.
 
-## ✨ O que é Vibe Coding
+```
+#Contexto
 
-**Vibe Coding** é uma forma leve e criativa de desenvolver com IA, baseada em **conversas naturais e bem estruturadas**. Você não precisa escrever código linha por linha. Em vez disso, aprende a **guiar a IA** descrevendo suas ideias de forma clara, com **intenção e contexto**. Em outras palavras:
+Quero criar um aplicativo de organização de finanças pessoais que seja visual, intuitivo e interativo, com a conversa como forma rápida de lançar gastos. A ideia é facilitar o controle financeiro de forma simples e natural, sem formulários longos nem planilhas complexas.
 
-> Você mostra a vibe da sua ideia e a IA transforma em solução (ou em um caminho para ela).
+O painel visual (gráficos de pizza, porcentagens e saldo) é a tela principal. O chat é o atalho para registrar um gasto em segundos. O app é pensado primeiro para o celular e, em telas grandes, passa a usar menu lateral e duas colunas.
 
-## 🎯 Desafio
+#Problema
 
-Problema: Muitas pessoas não conseguem manter um controle financeiro porque os aplicativos exigem muita entrada de dados manual, e a criação de orçamentos é vista como algo tedioso. 
+Muitas pessoas desistem de controlar seus gastos porque os apps atuais exigem muita entrada manual e oferecem pouca personalização. Quero resolver isso com uma experiência rápida de lançamento, um painel que mostra para onde o dinheiro está indo e recomendações automáticas de economia.
 
-Precisamos de uma solução que permita **controlar as finanças por meio de uma conversa simples**, com **agentes de IA** capazes de criar **planos de economia personalizados e automatizados**. Você deve utilizar as ideias de **Vibe Coding** e **MVP (Produto Mínimo Viável)** para desenvolver o **conceito de um aplicativo** que resolva o problema citado.
+#Público-alvo
 
-> [!IMPORTANT]
-> Você **não precisa construir o código**! O foco está em **usar a IA como sua parceira criativa**, transformando boas ideias e prompts em conceitos funcionais que simulam um produto real.
-
-## 🪄 Etapas do Desafio
-
-### 1. Saber o que Pedir é a Chave! Otimize seus Prompts!
-
-Antes de pedir para a IA "criar um app", é importante definir com clareza o que você quer construir e por quê. Para isso, você vai criar um **PRD (Product Requirements Document)** simplificado, uma especificação que serve como _briefing_ para a IA entender sua ideia.
-
-Um bom PRD deve descrever o problema, quem será beneficiado, as principais funcionalidades e o que você espera que a IA entregue. Use o modelo abaixo como ponto de partida e adapte conforme o seu estilo:
-
-```txt
-# Contexto
-Quero criar um aplicativo de Organização de Finanças Pessoais que funcione por meio de conversas com o usuário.  
-A ideia é facilitar o controle financeiro de forma simples e natural, sem formulários manuais ou planilhas complexas.
-
-# Problema
-Muitas pessoas desistem de controlar seus gastos porque os apps atuais exigem muita entrada manual e pouca personalização.  
-Quero resolver isso com uma experiência de conversa e recomendações automáticas de economia.
-
-# Público-Alvo
 Pessoas que querem começar a organizar suas finanças de forma prática e sem complicação, principalmente iniciantes.
 
-# Funcionalidades-Chave
-1. Registrar gastos via chat em linguagem natural.  
-2. Classificar automaticamente as transações.  
-3. Definir e acompanhar metas financeiras.  
-4. Receber dicas de economia do “Agente Financeiro”.  
-5. Visualizar relatórios simples e personalizados.
+Persona de referência: jovem de 18 a 30 anos, com renda pequena ou variável, que já tentou usar planilha ou outro app e desistiu por dar trabalho. Usa o celular o dia todo e não entende (nem quer entender) termos financeiros complicados.
 
-# Entregável da IA
-Gerar um plano de MVP com as principais telas, recursos necessários e um esboço de validação inicial.  
-Usar tom educativo e linguagem acessível, em português.
+#Princípios do produto
+
+Visual primeiro: o usuário entende a situação do mês em uma olhada, sem ler tabelas.
+
+Rápido: registrar um gasto leva poucos segundos e poucos toques.
+
+Linguagem simples: português claro, sem jargão, com tom educativo e acolhedor.
+
+Sem punição: avisos e dicas ajudam, não culpam.
+
+#Funcionalidades-chave (MVP)
+
+Painel principal: saldo do mês, total de entradas e de saídas, e gráfico de pizza por categoria com porcentagens. Ao tocar em uma fatia, o usuário vê os lançamentos daquela categoria. Um aviso mostra contas atrasadas ou perto do vencimento.
+
+Lançamento rápido por frase: o usuário escreve algo como “gastei 35 no mercado” ou “paguei 12 de uber ontem” e o app identifica valor, categoria e data.
+
+Lançamento manual: formulário simples como plano B, para quando a frase não for entendida ou o usuário preferir.
+
+Receitas e despesas: registrar o que entra (salário, extras) e o que sai, para calcular saldo e porcentagem da renda gasta.
+
+Categorias automáticas e editáveis: o app sugere a categoria pelas palavras da frase, e o usuário corrige com um toque.
+
+Metas e orçamento por categoria: definir um limite (por exemplo, lazer: R$ 200/mês) e acompanhar com barra de progresso e aviso ao chegar perto do limite.
+
+Contas a pagar: cadastrar boletos e contas com data de vencimento. O app separa as atrasadas, as dos próximos 7 dias e as mais adiante. Ao tocar em “Paguei”, a conta vira um gasto lançado.
+
+Assistente financeiro: chat para perguntar sobre os próprios números, como “onde posso economizar?” ou “quais contas pago primeiro?”. Ao perguntar, um resumo dos números do mês é enviado ao Claude para gerar a resposta.
+
+Dicas automáticas: sugestões curtas no painel baseadas nos dados, como “você gastou 40% do mês com lazer; que tal reduzir um pouco?”.
+
+Resumo mensal: saldo, média por dia, comparação com o mês anterior e as maiores categorias.
 ```
 
-Depois de preencher o modelo, use o Copilot Web para revisar e melhorar o seu prompt antes de ir ao Lovable. A ideia é lapidar o texto até que ele fique claro, direto e reflita exatamente a sua intenção.
+Interações com a IA:
 
-> [!TIP]
-> Pense no PRD/Prompt como “o briefing que a IA precisa para entender sua vibe”. Portanto, quanto mais claro e intencional for o texto, mais próximas do ideal serão as respostas da IA.
+>Eu tinha em mente um app visualmente intuitivo, fácil de usar e bem interativo, sabe? com aqueles gráficos em pizza, porcentagens e tal.
 
-### 2. Explorando o Lovable na Prática
+>Beleza! Agora vamos por a mão na massa e criar essa pagina!
 
-Com seu PRD pronto e revisado, é hora de colocar a IA em ação. Abra o Lovable, cole seu prompt completo e peça o plano inicial do MVP do seu aplicativo. Como o plano gratuito limita você a 5 interações por dia, seja estratégico:
-- Faça perguntas diretas e construtivas, como “crie o fluxo de telas com base nas funcionalidades listadas” ou “gere uma versão resumida do plano de MVP”;
-- Priorize clareza nas instruções para aproveitar ao máximo cada resposta;
+>Em resposta aos pontos em aberto:  Quero um pouco completo, sem exagero. 
 
-Durante essa etapa, você pode orientar a IA para três entregas principais:
-1. Agente Financeiro: defina o comportamento e o tom de voz de um consultor financeiro pessoal, alinhado ao público e objetivo do app.
-2. Fluxo de Telas: peça à IA para gerar o fluxo conceitual de telas com base nas funcionalidades descritas no PRD, simulando a interação por conversa.
-3. Plano de MVP: solicite um resumo das 5 funcionalidades principais, dos recursos necessários e um plano de validação inicial (como medir se o app cumpre seu propósito).
+>Tera como uso principal no celular e os dados devem ficar apenas no aparelho do usuario
 
-> [!TIP]
-> Se preferir, você pode fazer tudo com o **Copilot**. O importante é exercitar a habilidade de transformar intenções em instruções claras e testar os limites da IA como parceira criativa.
+Resultado final: https://claude.ai/artifact/WKHvxzyaqiRXJAFKfcsyay
 
-### 3. Entregando o Desafio na DIO
+<img width="1306" height="854" alt="image" src="https://github.com/user-attachments/assets/b1f139ff-36f0-4d18-b95b-40dfd70f25a2" />
 
-Finalize seu projeto criando um **repositório no GitHub** (pode ser um **fork** deste).  
-No README do seu repositório, inclua:
+Resumo do APP:
 
-- Seu **prompt final** (PRD);  
-- Prints ou pequenos vídeos das interações com a IA;  
-- Um resumo do que o seu **App de Finanças Pessoais** faz;  
-- Uma breve **reflexão sobre o processo**:
-  - O que funcionou bem?  
-  - O que não funcionou como o esperado?  
-  - O que aprendeu sobre conversar com IAs?
+O Meu Bolso é um app de finanças pessoais pensado primeiro para o celular, que também se adapta a telas grandes, como no print que você mandou. Ele mostra para onde o seu dinheiro foi de um jeito visual, sem planilhas.
 
-> [!TIP]
-> Publique seu repositório e compartilhe o link na plataforma da DIO! Sua entrega é a prova de que você domina o raciocínio de Vibe Coding, mesmo sem escrever uma única linha de código.
+Lançar gastos: você escreve algo como “gastei 35 no mercado” e ele identifica valor, categoria e data. Também dá para preencher manualmente.
+Painel: mostra saldo, entradas e saídas do mês, com um gráfico de pizza por categoria e porcentagens.
+Contas a pagar: cadastra boletos e vencimentos, avisa o que está atrasado ou perto de vencer e, ao tocar em “Paguei”, lança o valor nos gastos.
+Metas: limites por categoria, com barras de progresso.
+Resumo e dicas: comparação com o mês anterior e sugestões curtas de economia.
+Assistente (✨): um chat para perguntar sobre os seus números, como “onde posso economizar?”.
+
+Os dados ficam só no aparelho de quem usa. A única exceção é o assistente, que envia um resumo dos números do mês ao Claude para responder.
+
+Reflexão sobre o processo:
+
+# O que funcionou bem
+Começar pelo PRD antes de criar o app. A revisão mostrou lacunas (receitas, categorias editáveis, privacidade) e uma contradição entre o texto, centrado em chat, e o que eu queria de verdade, um app visual com gráficos. Com isso, a primeira versão já saiu próxima do que eu imaginava, e foi fácil pedir novos ajustes em etapas, como contas a pagar, assistente e layout para telas grandes.
+
+# O que não funcionou como o esperado
+Alguns problemas só apareceram quando eu vi o resultado, como o texto com pouco contraste no card de saldo no modo escuro. O PRD também prometia coisas que o app ainda não fazia, como “aprender com as correções” de categoria, e isso precisou ser corrigido. Além disso, a IA não conseguiu testar o app no celular, então dependi dos meus prints para encontrar os erros.
+
+# O que aprendi sobre conversar com IAs
+Quanto mais claro o objetivo, melhor o resultado. Pedir uma revisão antes de construir evita retrabalho, e mandar print mostra o problema melhor do que descrevê-lo. Também aprendi a conferir o que a IA afirma em vez de aceitar de primeira, inclusive sobre privacidade, como no assistente, que envia um resumo dos dados ao Claude.
+
+
+
 
 ## 💬 Conclusão
 
