@@ -1,4 +1,4 @@
-# 💸 App de Organização de Finanças Pessoais com Vibe Coding
+# 💸 App de Organização de Finanças Pessoais, "Meu bolso"
 
 
 ```
